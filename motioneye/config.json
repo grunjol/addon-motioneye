@@ -3,7 +3,7 @@
   "version": "dev",
   "slug": "motioneye",
   "description": "Simple, elegant and feature-rich CCTV/NVR for your cameras",
-  "url": "https://github.com/grunjol/addon-motioneye",
+  "url": "https://github.com/hassio-addons/addon-motioneye",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:8765]",
   "startup": "application",
   "ingress": true,
@@ -52,5 +52,6 @@
     "ssl": "bool",
     "certfile": "str",
     "keyfile": "str"
-  }
+  },
+  "image": "grunjol/{arch}-motioneye"
 }
