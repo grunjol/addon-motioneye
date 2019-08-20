@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:3.1.0
+ARG BUILD_FROM=hassioaddons/base:4.0.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -11,23 +11,23 @@ COPY requirements.txt /tmp/
 # Setup base
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        curl-dev=7.64.0-r1 \
+        curl-dev=7.65.1-r0 \
         gcc=8.3.0-r0 \
         jpeg-dev=8-r6 \
-        musl-dev=1.1.20-r4 \
+        musl-dev=1.1.22-r3 \
         py2-pip=18.1-r0 \
-        python-dev=2.7.15-r3 \
+        python-dev=2.7.16-r1 \
     \
     && apk add --no-cache \
-        cifs-utils=6.8-r0 \
-        ffmpeg@edge=4.0.2-r0 \
-        libcurl=7.64.0-r1 \
+        cifs-utils=6.9-r0 \
+        ffmpeg=4.1.3-r1 \
+        libcurl=7.65.1-r0 \
         libjpeg=8-r6 \
-        mosquitto-clients=1.5.6-r0 \
+        mosquitto-clients=1.6.3-r0 \
         motion@edge=4.2.2-r0 \
-        nginx=1.14.2-r0 \
-        py-setuptools=40.6.3-r0 \
-        python2=2.7.15-r3 \
+        nginx=1.16.1-r0 \
+        py-setuptools=40.8.0-r1 \
+        python2=2.7.16-r1 \
     \
     && pip install --no-cache-dir -r /tmp/requirements.txt \
     \
